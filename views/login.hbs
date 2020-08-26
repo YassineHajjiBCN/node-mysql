@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+  <title>Home</title>
+</head>
+<body>
+  <nav>
+    <div class="logo">Mysql-Nodejs</div>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+      <li><a href="/aboutus">About us</a></li>
+    </ul>
+  </nav>
+  
+  <div class="container mt4">
+   <div class="card" >
+    <div class="card-header">
+      Form Log in 
+    </div>
+
+    <div class="card-body">
+     <form action="/auth/register" method="POST">
+         
+        <div class="form-group">
+         <label for="email">Email</label>
+         <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class="form-group">
+         <label for="Password">Password</label>
+         <input type="password" class="form-control" id="Password" name="Password">
+        </div>
+         
+         
+        <button type="submit" class="btn btn-primary">Log in</button>
+     </form>
+    </div>
+   </div>
+     {{#if message }}
+     <h3 class="alert alert-danger mt-3.5">{{message}}</h3>
+   {{/if}}
+  </div>
+
+  </div>
+
+  
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+</body>
+</html>
